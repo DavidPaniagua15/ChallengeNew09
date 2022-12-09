@@ -86,6 +86,42 @@ const questions = [ {
         }
     }
 },
+
+{
+    type: 'input',
+    name: 'installation',
+    message: 'Please provide step-by-step installation instructions for your project! (required)',
+    validate: installInput => {
+        if (installInput) {
+            return true;
+        } else {
+            console.log('please enter your installation instruction!');
+            return false;
+        }
+    }
+},
+
+{
+    type: 'input',
+    name: 'usage',
+    message: 'Please provide instructions and examples for use! (required)',
+    validate: usageInput => {
+        if (usageInput) {
+            return true;
+        } else {
+            console.log('please enter your use instructions!');
+            return false;
+        }
+    }
+},
+
+{
+    type: 'list',
+    name: 'license',
+    message: 'Which license will you use for your project? (required)',
+    choices: ['agpl', 'apache', 'mit', 'no license']
+}
+ 
 ];
 
 // TODO: Create a function to write README file
