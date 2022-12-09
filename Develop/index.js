@@ -121,7 +121,25 @@ const questions = [ {
     message: 'Which license will you use for your project? (required)',
     choices: ['agpl', 'apache', 'mit', 'no license']
 }
- 
+{    
+    type: 'confirm',
+    name: 'confirmContributers',
+    message: 'Would you like to allow other developers to contribute?',
+    default: true
+},
+
+{
+    type: 'input',
+    name: 'contribute',
+    message: 'Please provide guidelines for contributing. (required)',
+    when: ({ confirmContributers }) => {
+        if (confirmContributers) {
+            return true
+        } else {
+            return false
+        }
+    },
+
 ];
 
 // TODO: Create a function to write README file
