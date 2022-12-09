@@ -15,7 +15,37 @@ const questions = [ {
             return false;
         }
     }
-}];
+},
+
+{
+    type: 'input',
+    name: 'titlename',
+    message: 'What is your GitHub username> (required)',
+    validate: gitHubInput => {
+        if (gitHubInput) {
+            return true;
+        } else {
+            console.log('please enter your GitHub username!');
+            return false;
+        }
+    }
+},
+
+{
+    type: 'input',
+    name: 'email',
+    message: 'What is your email address? (required)',
+    validate: emailInput => {
+        if (emailInput) {
+            return true;
+        } else {
+            console.log('please enter your email address!');
+            return false;
+        }
+    }
+},
+
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
