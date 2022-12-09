@@ -75,13 +75,13 @@ const questions = [ {
 
 {
     type: 'input',
-    name: 'titlename',
-    message: 'What is the title of your project? (required)',
-    validate: titleInput => {
-        if (titleInput) {
+    name: 'someone',
+    message: 'How will someone use this? (required)',
+    validate: someoneInput => {
+        if (someoneInput) {
             return true;
         } else {
-            console.log('please enter your title!');
+            console.log('please enter what your project is!');
             return false;
         }
     }
