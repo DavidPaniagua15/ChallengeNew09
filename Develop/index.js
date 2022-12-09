@@ -120,7 +120,7 @@ const questions = [ {
     name: 'license',
     message: 'Which license will you use for your project? (required)',
     choices: ['agpl', 'apache', 'mit', 'no license']
-}
+},
 {    
     type: 'confirm',
     name: 'confirmContributers',
@@ -139,6 +139,17 @@ const questions = [ {
             return false
         }
     },
+    validate: contributerInput => {
+        if (contributerInput) {
+            return true
+        } else {
+            console.log ('Please enter contributer guidelines.');
+            return false;
+        }
+    }
+},
+
+
 
 ];
 
