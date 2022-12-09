@@ -53,6 +53,34 @@ const questions = [ {
         if (problemInput) {
             return true;
         } else {
+            console.log('please enter what your project is!');
+            return false;
+        }
+    }
+},
+
+{
+    type: 'input',
+    name: 'create',
+    message: 'Why did you create this project? (required)',
+    validate: createInput => {
+        if (createInput) {
+            return true;
+        } else {
+            console.log('please enter why you create this project!');
+            return false;
+        }
+    }
+},
+
+{
+    type: 'input',
+    name: 'titlename',
+    message: 'What is the title of your project? (required)',
+    validate: titleInput => {
+        if (titleInput) {
+            return true;
+        } else {
             console.log('please enter your title!');
             return false;
         }
