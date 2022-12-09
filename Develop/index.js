@@ -148,8 +148,19 @@ const questions = [ {
         }
     }
 },
-
-
+{
+    type: 'input',
+    name: 'test',
+    message: 'Please provide instructions on how to test the app. (required)',
+    validate: testInput => {
+        if (testInput) {
+            return true;
+        } else {
+            console.log ('Please enter your use test instructions!');
+            return false;
+        }
+    }
+}
 
 ];
 
